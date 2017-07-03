@@ -3,8 +3,9 @@
 
 本爬虫程序提供多线程api爬取功能。
 
-整个程序的框架流程为：
-1.初始化阶段
+**整个程序的框架流程为：**
+
+**1.初始化阶段
 
 1.1.TaskPool：生成线程池和TaskGenerator对象，以及两个数据队列readDataQueue和writeDataQueue
 
@@ -12,7 +13,7 @@
 
 1.3.DataQueueTask：从数据库中读取数据写入readDataQueue，进入等待writeDataQueue的状态
 
-2.运行阶段
+**2.运行阶段
 
 2.1.TaskPool：循环向TaskGenerator询问是否有新的任务（线程）
 
@@ -22,7 +23,7 @@
 
 2.4.DataQueueTask：循环读取writeDataQueue中的数据，将其写入数据库。看情况是否要往readDataQueue写入新的数据
 
-3.结束阶段
+**3.结束阶段
 
 3.1.若DataQueueTask不往readDataQueue写入新的数据，则一旦readDataQueue为空，整个程序会停止。
     此时还在运行的线程会在运行结束后停止。
@@ -37,7 +38,7 @@
                                                          |
                      ==================== writeDataQueue——
 
-爬虫扩展一般方法：
+**爬虫扩展一般方法：
 
 1.在TaskGenerator中添加相应的爬虫线程创建代码。
 
@@ -49,7 +50,7 @@
 
 5.在TaskPool中创建TaskGenerator时修改参数。
 
-twitter api备注：
+**twitter api备注：
 
 1.twitter提供的api种类较多，代码里用的是REST API。
 
