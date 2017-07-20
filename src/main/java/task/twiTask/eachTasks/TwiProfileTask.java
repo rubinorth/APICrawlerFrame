@@ -3,7 +3,7 @@ package task.twiTask.eachTasks;
 import entity.twiEntity.TwiProfileEntity;
 import task.SpecificTask;
 import twitter4j.*;
-import twitter4j.internal.logging.Logger;
+import twitter4j.Logger;
 
 import java.util.ArrayList;
 import java.util.List;
