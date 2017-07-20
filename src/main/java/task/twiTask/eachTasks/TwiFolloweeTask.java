@@ -3,7 +3,7 @@ package task.twiTask.eachTasks;
 import entity.twiEntity.TwiFollowEntity;
 import task.SpecificTask;
 import twitter4j.IDs;
-import twitter4j.internal.logging.Logger;
+import twitter4j.Logger;
 import twitter4j.Twitter;
 import twitter4j.TwitterException;
 
